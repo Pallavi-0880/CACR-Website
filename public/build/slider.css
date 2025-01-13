@@ -1,0 +1,236 @@
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.card {
+    /* background-color: #07020D; */
+    width: 70%;
+}
+.bio-card .card{
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .about_img_m {
+        width: 713px;
+        height: 407px;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    }
+
+    .card {
+        /* background-color: #07020D; */
+        width: 40%;
+    }
+
+    .about_img_v {
+        width: 713px;
+        height: 407px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    }
+}
+
+
+@media screen and (min-width: 640px) {
+    .about_img_m {
+        width: 640px;
+        height: 320px;
+        padding-left: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .about_img_v {
+        width: 640px;
+        height: 320px;
+        padding-right: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+/* @media screen and (min-width: 420px) {
+    .about_img_m {
+        display: none;
+      }
+      .about_img_v {
+        display: none;
+      }
+  } */
+
+.about-hero {
+    background-image: url('../img/heroscreen/about.jpg');
+}
+
+.hero-bg {
+    background-image: linear-gradient(to right, rgba(7, 2, 13, 0.6), rgba(7, 2, 13, 0.3)), url('../img/heroscreen/background.jpg');
+}
+
+.contact-form ::placeholder,
+.contact-form ::-moz-placeholder {
+    font-size: 18px;
+    color: #07020D;
+    letter-spacing: 0.5px;
+}
+
+.eventbox {
+    transition: all 1s ease-in-out;
+}
+
+.event-box_date {
+    transition: all 0.2s ease-in-out;
+}
+
+.event-box_date:hover {
+    background-color: #F97A7A;
+}
+
+.eventbox:hover {
+    background-image: linear-gradient(to bottom right, #F6D242, #FF52E5);
+    transform: scaleX(95%);
+    color: white;
+}
+
+.text-comment {
+    background-image: linear-gradient(to right, #D81E32, rgba(216, 30, 50, 0.92));
+}
+
+/* Pre Loader*/
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url("../img/preloader.gif") no-repeat center;
+    z-index: 99999;
+}
+
+
+/* Filter */
+.team-cards .people.hide {
+    display: none;
+}
+
+/* .team-cards .people.active {
+    display: block;
+} */

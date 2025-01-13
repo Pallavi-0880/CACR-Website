@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page - CACR</title>
+    <link rel="stylesheet" href="./build/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+
+    <!-- Logo Slider
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./build/slider.css">
+</head>
+
+<body class="bg-gray-100 font-sans" onload="myFunction()">
+
+    <div id="loading"></div>
+    <!-- Navigation Menu -->
+    <header>
+        <div class="mb-2">
+            <nav class="flex justify-between">
+                <!-- Logo -->
+                <div class="pl-4 sm:pl-10 pt-7 pb-3 xl:pb-4 pr-24 flex-shrink ">
+                    <h1>
+                        <a href="index.html">
+                            <img src="./img/nav_logo.png" alt="CACR Logo" class="h-12 sm:h-16 xl:h-20">
+                        </a>
+                    </h1>
+                </div>
+                <!-- Mobile Navigation Icon-->
+                <div class="px-4 cursor-pointer lg:hidden flex items-center" id="menu_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 md:h-12 md:w-12" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+
+                <!--Desktop Navigation -->
+                <div class="hidden lg:flex items-center flex-grow justify-between order-2 ">
+                    <ul class="font-title flex flex-grow justify-between lg:flex-row">
+
+                        <li class="nav-style">
+                            <a href="about.html" class="nav-style_hover">
+                                <span class="">About us</span>
+                                <div class="w-16 bg-yellowprimary h-0.5 mx-auto"></div>
+                            </a>
+                        </li>
+                        <li class="nav-style relative">
+                            <!-- <div class="cursor-pointer">
+                                <span class="nav-style_hover ">Programs</span>
+                                <div class="bg-white rounded-lg shadow-md absolute mt-3 w-40 h-32 flex flex-col justify-around self-center text-center">
+                                                    <a href="#" class=" px-2 py-2 hover:bg-pinkprimary hover:text-white ">Projects</a>
+                                                    <a href="#" class=" px-2 py-2 hover:bg-pinkprimary hover:text-white">Events</a>
+                                </div>
+                            </div> -->
+                            <div class="dropdown">
+                                <button class="nav-style nav-style_hover">Programs</button>
+                                <div
+                                    class="dropdown-content
+                                        ml-1 mb-0.5 bg-white bg-opacity-90 rounded-lg shadow-md pt-5 w-36 h-auto flex flex-col justify-evenly text-center gap-1">
+                                    <a href="projects.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Projects</a>
+                                    <a href="events.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Events</a>
+                                    <a href="news.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base rounded-b-lg">News</a>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="nav-style relative">
+                            <!-- <a href="#" class="nav-style_hover">
+                                <span>Resources</span>
+                            </a> -->
+                            <div class="dropdown">
+                                <button class="nav-style nav-style_hover">Resources</button>
+                                <div
+                                    class="dropdown-content
+                                        ml-1 mb-0.5 bg-white bg-opacity-90 rounded-lg shadow-md pt-5 w-48 h-auto flex flex-col justify-evenly text-center gap-1">
+                                    <a href="annual-reports.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Annual
+                                        Project Reports</a>
+                                    <a href="/public/newsletter.html" target="_blank"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Newsletter</a>
+                                    <a href="./documents/CACR_brochure.pdf" target="_blank"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">CACR
+                                        Brochure</a>
+                                    <a href="partnertestimonials.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base rounded-b-lg">Partner
+                                        Testimonials</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-style">
+                            <!-- <a href="#" class="nav-style_hover">
+                                <span>Contact us</span>
+                            </a> -->
+                            <div class="dropdown">
+                                <button class="nav-style nav-style_hover">Contact us</button>
+                                <div
+                                    class="dropdown-content
+                                        ml-1 mb-0.5 bg-white bg-opacity-90 rounded-lg shadow-md pt-5 w-48 h-auto flex flex-col justify-evenly text-center gap-1">
+                                    <a href="volunteer.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Volunteer
+                                        with us</a>
+                                    <a href="contactus.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base rounded-b-lg mt-1">Connect
+                                        with us</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Donate Button -->
+                        <li>
+                            <div
+                                class="flex text-xl  xl:text-2xl uppercase font-semibold text-grayprimary flex-shrink justify-end">
+                                <a href="donate.html">
+                                    <span
+                                        class="p-12 bg-pinkprimary xl:p-14 hover:bg-red-500 hover:text-white">Donate</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Mobile Navigation -->
+            <div class="hidden" id="mob_nav">
+                <ul class="font-title flex flex-grow flex-col justify-center ">
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="about.html" class="">
+                            <span class="pl-2">About us</span>
+                        </a>
+                    </li>
+                    <li class="nav-style p-2 ">
+                        <div class="about_us flex ">
+                            <div class="hover:text-yellowprimary cursor-pointer" id="mob_prog">
+                                <span class="pl-2 pr-2">Programs</span>
+                            </div>
+                            <div class="cursor-pointer" id="mob_programs_btn">
+                                <img src="./img/icons/bottom_arrow.svg" alt="Bottom Arrow"
+                                    class="h-6 w-6 hover:bg-yellowprimary transition duration-300 ease-in">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start pl-12 pt-1 hidden" id="mob_programs_menu">
+                            <a href="projects.html" class=" p-2 text-lg font-medium hover:text-yellowprimary">Our
+                                Projects</a>
+                            <a href="events.html" class="p-2 text-lg font-medium hover:text-yellowprimary">Our
+                                Events</a>
+                            <a href="news.html" class="p-2 text-lg font-medium hover:text-yellowprimary">CACR in the
+                                News</a>
+                        </div>
+                    </li>
+                    <li class="nav-style p-2 ">
+                        <div class="about_us flex ">
+                            <div class="hover:text-yellowprimary cursor-pointer" id="mob_resource">
+                                <span class="pl-2 pr-2">Resources</span>
+                            </div>
+                            <div class="cursor-pointer" id="mob_resources_btn">
+                                <img src="./img/icons/bottom_arrow.svg" alt="Bottom Arrow"
+                                    class="h-6 w-6 hover:bg-yellowprimary transition duration-300 ease-in">
+                            </div>
+                        </div>
+                        <div class=" flex flex-col items-start pl-12 pt-1 hidden" id="mob_resources_menu">
+                            <a href="annual-reports.html"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">Annual Project Reports</a>
+                            <a href="/public/newsletter.html" target="_blank"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">Newsletter</a>
+                            <a href="./documents/CACR_brochure.pdf" target="_blank"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">CACR Brochure</a>
+                            <a href="partnertestimonials.html"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">Partner Testimonials</a>
+                        </div>
+                    </li>
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="contactus.html" class="">
+                            <span class="pl-2">Contact us</span>
+                        </a>
+                    </li>
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="volunteer.html" class="">
+                            <span class="pl-2">Volunteer</span>
+                        </a>
+                    </li>
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="donate.html" class=" ">
+                            <span class="pl-2">Donate</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-style p-2">
+                        <div class="flex justify-evenly">
+                            <a href="#" class="nav-style_hover">
+                                <span class="font-bold text-pinkprimary text-xl">Volunteer</span>
+                            </a>
+                            <a href="#" class="nav-style_hover">
+                                <span class="font-bold text-pinkprimary text-xl ml-10">Donate</span>
+                            </a>
+                        </div>
+                        -->
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Mobile Navigation -->
+        </div>
+    </header>
+
+    <main>
+        <!-- About Page Hero Section-->
+        <section class="about-hero  w-full h-96 bg-cover bg-no-repeat relative">
+            <div class="flex justify-end">
+                <img src="./img/heroscreen/Subtract.png" alt="image overlay pink" class="h-96">
+            </div>
+            <div
+                class="about_content absolute top-24 right-12 sm:top-40 sm:right-28 md:top-32 md:right-32 lg:top-20 lg:right-52 w-2/3 lg:w-1/3">
+                <div class="about_h2 uppercase text-white text-2xl lg:pb-2 pb-4">About CACR</div>
+                <div class="about_p uppercase">
+                    <p class="text-white lg:text-3xl text-xl">
+                        <span class="lg:font-bold font-semibold lg:text-3xl text-xl">WE ARE A NETWORK OF LIKE MINDED
+                            CITIZENS</span>
+                        ENSURING GOOD QUALITY EDUCATION & HEALTH FOR ALL CHILDREN
+                    </p>
+                </div>
+            </div>
+        </section> <!-- End of About Page Hero Section-->
+
+        <!-- Quote Content Section-->
+        <section class="bg-grayprimary mt-10">
+            <div class="flex">
+                <div class="quote w-1/2 hidden md:block">
+                    <h2 class="text-4xl pl-10  text-graysecondary-300 pr-10 lg:mt-20 lg:p-15">
+                        <span class="font-bold">THE BEST WAY TO FIND YOURSELF IS TO LOSE YOURSELF IN THE</span>
+                        SERVICE OF OTHERS
+                    </h2>
+                </div>
+                <div class="content w-full p-5 md:p-0 md:w-1/2 md:pr-5">
+                    <div class="content-title">
+                        <h2 class="uppercase text-2xl font-semibold text-blueprimary">Our Story</h2>
+                    </div>
+                    <div class="content-p">
+                        <p class="pt-3">
+                            Citizens Association for Child Rights (CACR) is a non-profit organization.
+                            We work in Behavioral Change Communication Programs in Municipal schools of Mumbai.
+                            We have reached 56,000 children from 395 schools over the years with our Personal Hygiene
+                            Management
+                            and Menstrual Hygiene Management programs. Furthermore, we have conducted specialized
+                            programs on
+                            activation of School Management Committees (SMCs)
+                        </p>
+                        <p class="pt-3 pb-10">
+                            Furthermore, we have conducted specialized programs on activation of School Management
+                            Committees (SMCs) and Child cabinets, Digital literacy classes for schools,
+                            Teacher training and a Mid-day meal monitoring program. In our endeavors,
+                            we have closely collaborated with the Education Department of Municipal
+                            Corporation of Greater Mumbai (MCGM) to improve the delivery of education
+                            systems to the children in Municipal schools.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Quote Content Section-->
+        <!-- Our Mission/Vision Section-->
+        <section>
+            <div class="about_mission bg-bluesecondary py-6 m-5 flex justify-between shadow-xl">
+                <div class="hidden about_mission_img w-6/12 lg:h-auto xl:w-7/12 sm:flex justify-center md:items-end ">
+                    <img src="./img/about/about_mission.jpg" alt="About mission image"
+                        class="about_img_m shadow-xl w-96 lg:h-auto">
+                </div>
+                <div class="about_mission_text w-full p-2 sm:p-0 sm:w-5/12 flex flex-col justify-center sm:pr-2">
+                    <div class="content-title">
+                        <h2
+                            class="uppercase text-xl md:text-2xl font-semibold text-blueprimary text-center md:text-left ">
+                            Our Mission</h2>
+                    </div>
+                    <p class="pt-5 text-sm md:text-base lg:text-lg font-normal lg:font-medium pr-3">
+                        Implement value-added projects for children and communities in the field of education, hygiene
+                        and sanitation, nutrition,
+                        gender equality, and mental health. Bridge gap between policies and people to ensure children's
+                        rights.
+                    </p>
+                </div>
+            </div>
+            <div class="about_vision py-6 mt-20 m-5 flex justify-between shadow-xl bg-about-vision ">
+                <div class="about_mission_text w-full sm:w-6/12 xl:w-5/12 flex flex-col justify-center pr-3 xl:pr-2">
+                    <div class="content-title">
+                        <h2
+                            class="uppercase text-xl md:text-2xl font-semibold text-blueprimary  text-center md:text-left  lg:pl-48  ">
+                            Our Vision</h2>
+                    </div>
+                    <p
+                        class="pt-5 text-sm md:text-base lg:text-lg font-normal lg:font-medium  lg:p-3 sm:p-12 lg:pl-36 xl:pl-48">
+                        Transforming the lives of underprivileged children by
+                        implementing and improving policies and programs on Education, WASH,
+                        Nutrition, Gender equality, and Child Protection.
+                    </p>
+                </div>
+                <div class="hidden about_vision_img w-7/12 sm:flex justify-center items-end ">
+                    <img src="./img/about/about_vision.jpg" alt="About Vision image" class="about_img_v shadow-xl">
+                </div>
+            </div>
+        </section>
+        <!-- End of Our Mission/Vision Section-->
+        <!--Team-->
+        <section class="mt-20">
+            <div class="our-team-header">
+                <h2 class="uppercase text-2xl md:text-3xl lg:text-5xl text-center font-bold ">Our Team</h2>
+            </div>
+            <div class=" team flex justify-between my-10 mx-12 xl:mx-32 gap-2">
+                <div class="list active directors bg-white w-36 md:w-48 lg:w-64 xl:w-80 h-14 border border-pinksecondary-300 hover:bg-pinksecondary-300 
+                                cursor-pointer text-pinksecondary-300 hover:text-white hover:border-white transition transform duration-300 hover:scale-105 "
+                    data-filter="directors">
+                    <p class="uppercase text-base text-center block pt-4 font-semibold  ">
+                        Directors
+                    </p>
+                </div>
+                <div class="list advisory bg-white w-36 md:w-48 lg:w-64 xl:w-80 h-14 border border-yellowprimary text-yellowprimary hover:text-white
+                                    hover:border-white cursor-pointer transition transform hover:bg-yellowprimary duration-300 hover:scale-105"
+                    data-filter="advisory">
+                    <p class="uppercase text-base text-center block pt-4 font-semibold ">Advisory</p>
+                </div>
+                <div class="list team bg-white  w-36 md:w-48 lg:w-64 xl:w-80 h-14 border border-blueprimary text-blueprimary transition transform duration-300 hover:scale-105
+                            cursor-pointer hover:text-white hover:border-white hover:bg-blueprimary"
+                    data-filter="team">
+                    <p class="uppercase text-base text-center block pt-4 font-semibold x">Team</p>
+                </div>
+            </div>
+            <div class="team-cards mt-20 flex flex-row flex-wrap justify-around gap-7 mb-20">
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="directors">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/nitin.jpg" alt="Nitin Wadhwani - Founder & Director of CACR"
+                            class="w-48 h-40">
+                    </div>
+                    <div class="card-nitin card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Nitin Wadhwani</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">FOUNDER <BR> DIRECTOR <BR> CEO</p>
+                    </div>
+                </div>
+
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="directors">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/indrani.jpg" alt="Indrani Malkani - Director of CACR" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">INDRANI MALKANI</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">DIRECTOR</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="directors">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/mpsingh.jpg" alt="MP Singh - Director of CACR" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">MOHINDER PAL SINGH BACHHER</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">DIRECTOR</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/ranganathan.jpg" alt="Veeraraghavan Ranganathan" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-2 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-xl uppercase font-bold  pb-1">Veeraraghavan Ranganathan</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Chairperson</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/lara.jpg" alt="Lara Shankar" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Lara Shankar</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/mohindru.jpg" alt="Mohindru Mirchandani" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-3 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Mohindru Mirchandani</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/chhaya.jpg" alt="Chhaya Angadi" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-3 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Chhaya Angadi</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/suraj.jpg" alt="Suraj Lala" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-3 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Suraj Lala</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/ashwin.jpg" alt="Aswhin Shetty" class="w-48 h-40">
+                    </div>
+                    <div class="card-aswhin card-txt flex flex-col pl-3 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Aswhin Kumar Shetty</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/Shubhangini.jpg" alt="Shubhangini Joshi" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-3 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Shubhangini Joshi</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl" data-item="advisory">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/madhurilele.jpg" alt="Madhuri Lele" class="w-48 h-40">
+                    </div>
+                    <div class="card-indira card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold   pb-1">Madhuri Lele</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase">Advisory</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="team">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/dilmohan.jpg" alt="Dilmohan Singh Nidharak" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">Dilmohan S Nidharak</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">Designer & Developer</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="team">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/shwetakadam.jpg" alt="Shweta Kadam" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">Shweta Kadam</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">CACR TEAM</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="team">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/zainab.jpg" alt="Zainab Cutlerywala" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">Zainab Cutlerywala</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">CACR TEAM</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="team">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/raeesapatel.jpg" alt="Raeesa Patel" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">Raeesa Patel</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">CACR TEAM</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="team">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/naveen.jpg" alt="Naveen Wadhwani" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">Naveen Wadhwani</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">CACR TEAM</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+                <!--Card-->
+                <div class="people card bg-white w-96 h-40 rounded-xl flex shadow-xl xl:mt-0 " data-item="team">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/suvarna.jpg" alt="Suvarna Ghadge" class="w-48 h-40">
+                    </div>
+                    <div class="card-mpsingh card-txt flex flex-col pl-5 justify-center w-1/2 cursor-pointer 
+                            hover:bg-blueprimary text-graysecondary-300 hover:text-white 
+                            transition transform duration-300 ease-linear">
+                        <p class="text-2xl uppercase font-bold pb-1">Suvarna Ghadge</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="uppercase ">CACR TEAM</p>
+                    </div>
+                </div>
+                <!--End of Card-->
+            </div>
+            <!-- Card Display -->
+            <!-- Nitin Wadhwani Card Display -->
+            <div
+                class="modal bio-card card-display-nitin hidden bg-black fixed bg-opacity-40 overflow-auto left-0 top-0 z-10 w-screen h-screen">
+                <div
+                    class=" bg-grayprimary w-5/6 sm:w-4/6 md:w-3/6 xl:w-2/6 p-8 overflow-y-scroll h-5/6 fixed top-10 right-10">
+                    <div class="close-icon">
+                        <img src="img/icons/cancel_cross.svg" alt="close button"
+                            class="h-8 w-8 cursor-pointer close_btn_nitin">
+                    </div>
+                    <div class="card bg-white w-80 xl:w-96 h-40 rounded-xl flex shadow-xl mt-3 xl:ml-0 ml-5">
+                        <div class="card-img w-48 h-40">
+                            <img src="./img/about/nitin.jpg" alt="Nitin Wadhwani - Founder & Director of CACR"
+                                class="w-48 h-40">
+                        </div>
+                        <div class="card-txt flex flex-col pl-2 justify-center w-1/2">
+                            <p class="text-2xl uppercase font-bold  text-graysecondary-300 pb-1 xl:pr-0 pr-2">Nitin
+                                Wadhwani</p>
+                            <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                            <p class="text-graysecondary-200 uppercase ">FOUNDER <br> DIRECTOR <Br> CEO</p>
+                        </div>
+                    </div>
+                    <div class="card-info_txt w-80 xl:w-96 xl:pl-0 pl-5 h-auto pt-10">
+                        <p>
+                            Nitin Wadhwani, Founder Director of CACR comes with a professional experience
+                            of 35+ years in the field of industrial electronics.
+                            He started as a donor to a leading NGO, which was followed by his involvement as a volunteer
+                            for a few years
+                            before anchoring the initiative Mumbaiites for Child Rights for a couple of years and
+                            finally establishing
+                            Citizens Association for Child Rights as a Section 8 non-profit organization.
+                            An opportunity to partner with IIT Bangalore to implement Computer Literacy Program
+                            in MCGM schools helped in not only teaching computers to children in municipal
+                            schools but also conducting training of teachers to improve the sustainability
+                            of the program.
+                        </p>
+                        <p class="pt-5">
+                            In 2017, CACR's work in municipal schools and connection with the MCGM Education Department
+                            was appreciated by UNICEF Maharashtra and
+                            CACR was selected as the first urban development partner for WASH (Water, Sanitation and
+                            Hygiene).
+                        </p>
+                        <p class="pt-5">
+                            Nitin strongly believes in empowering and providing value addition programs for children and
+                            their parents and works jointly with the education
+                            department to ensure the scalability and sustainability of these programs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--End of Card Display -->
+
+        </section>
+        <!--End of Team-->
+
+        <!-- Indrani Malkani Display -->
+        <div
+            class="modal2 bio-card card-display-indira hidden bg-black fixed bg-opacity-40 overflow-auto left-0 top-0 z-10 w-screen h-screen">
+            <div
+                class=" bg-grayprimary w-5/6 sm:w-4/6 md:w-3/6 xl:w-2/6 p-8 overflow-y-scroll h-5/6 fixed top-10 right-10">
+                <div class="close-icon">
+                    <img src="img/icons/cancel_cross.svg" alt="close button"
+                        class="h-8 w-8 cursor-pointer close_btn_indira ">
+                </div>
+                <div class="card bg-white w-80 xl:w-96 h-40 rounded-xl flex shadow-xl mt-3 xl:ml-0 ml-5">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/indrani.jpg" alt="Indrani Malkani - Director of CACR" class="w-48 h-40 ">
+                    </div>
+                    <div class="card-txt flex flex-col pl-5 justify-center w-1/2">
+                        <p class="text-2xl uppercase font-bold  text-graysecondary-300 pb-1">INDRANI MALKANI nee
+                            MUKHERJEE</p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="text-graysecondary-200 uppercase ">DIRECTOR</p>
+                    </div>
+                </div>
+                <div class="card-info_txt w-80 xl:w-96 xl:pl-0 pl-5 h-auto pt-10">
+                    <p>Indrani Malkani nee Mukherjee is the Chairman and Managing Trustee of V Citizens Action Network
+                        (VCAN) and is an Ashoka Fellow.
+                        Beginning her career with the Taj Group of Hotels, she rose to become the Conventions and
+                        Conference
+                        Manager of The Taj Palace Convention Hotel, Delhi. She coordinated various National and
+                        International
+                        Conventions. She moved to Mumbai when she married Capt. Ashok Malkani.
+                    </p>
+                    <p class="pt-5">
+                        Her specialty at work was in Logistics, Co-ordination and Troubleshooting, developing what was
+                        commonly known as “people skills”- an expertise which remains one of her major strengths in the
+                        work
+                        she does even today.
+                    </p>
+                    <p class="pt-5">
+                        In Mumbai, she has involved herself in civic and community issues, particularly contentious
+                        ones, where
+                        her belief has been to develop sustainable solutions in partnership with the Authorities. Among
+                        the
+                        organizations she works with are, the Municipal Corporation of Greater Mumbai (MCGM), Mumbai
+                        Police,
+                        various State Government departments, the Election Commission of India and State Election
+                        Commission
+                        of Maharashtra.
+                    </p>
+                    <p class="pt-5">
+                        She founded the ALM of Little Gibbs Roads in Malabar Hill, which was instrumental in starting
+                        MCGM’s
+                        “Integrated Relay Transport System of Segregated Waste Collection” in 2000. The success of which
+                        led
+                        MCGM to take execute this system across Mumbai.
+                    </p>
+                    <p class="pt-5">
+                        One of her more successful projects was to conceptualize and implement the Model School Bus
+                        Service,
+                        for the safe and secure transportation of school children. This safe and efficient system was
+                        accepted as a
+                        model on which the State of Maharashtra has based its Policy of Transportation of School
+                        Children. She is
+                        a Member of the Government Committee which formed this Policy and is now implementing the said
+                        Policy. She is also Member of the Road Safety Patrol Traffic Advisory Committee Traffic Police
+                        Mumbai.
+                    </p>
+                    <p class="pt-5">
+                        Apart from being a Member of the High Court Appointed Monitoring Committee for the Girgaum
+                        Chowpatty Beach, she is a Sitting Panel Member in the Lok Adalat of the State Consumer Disputes
+                        Redressal Commission, Maharashtra, and a Member of the State Committee on Electoral Literacy.
+                        She is Co-Convener of INTACH Greater Mumbai (Indian National Trust for Art and Cultural
+                        Heritage) and
+                        a Director in Citizens Association For Child Rights (CACR).
+                        She is also a Member of the Internal Complaints Committees for Sexual Harassment of Women in
+                        multiple
+                        Companies.
+                    </p>
+                    <p class="pt-5">
+                        To establish effective linkages between Government and Citizens, her Trust V Citizens Action
+                        Network
+                        (VCAN) runs a Web Portal www.togethervcan.in, which deals with multiple issues that effects a
+                        Citizen’s
+                        daily life on a single platform and also conducts a live talk show series titled “TogetherVCAN's
+                        SOCIAL
+                        SANCHAR” with the motto “Interact with your Government from wherever you are". During the
+                        COVID-19
+                        pandemic, the Social Sanchars have been expanded with a new series called 'Health and Wellbeing'
+                        featuring leading Doctors and Healthcare Professionals as Speakers.
+                    </p>
+                    <p class="pt-5">
+                        Indrani Malkani has been invited to speak at various fora on issues ranging from Safe
+                        Transportation of
+                        school children, Road Safety, Role of Cooperative Housing Societies in the Electoral Processes,
+                        Solid Waste
+                        Management, Civil Society and NGOs role in Disaster Management, Lok Adalat, to Consumer Rights
+                        etc.
+                    </p>
+                    <p class="pt-5">
+                        She has also been invited to be a Panelist on multiple television channels as well as being
+                        interviewed on
+                        radio shows.
+                    </p>
+                    <p class="pt-5">
+                        She has received many awards and recognitions, including the Mumbai Police Gaurav Patra and
+                        Medal,
+                        IBG Excellence Award for Public Service, Featured among 26 Mumbai Heroes by the Mumbai Mirror –
+                        2013, Loreto College (her alma mater) – Alumnae Achiever’s Award - Centenary Year, Vocational
+                        award
+                        for Outstanding Contribution for Betterment of Public Service in Mumbai City by Rotary Club of
+                        Mumbai
+                        South, Personal award received in 2002 for “Swachcha Mumbai Abhiyan” by MCGM and being an Ashoka
+                        Fellow.
+                    </p>
+                    <p class="pt-5">
+                        She firmly believes in working in Partnership with the Statutory Authorities, towards achievable
+                        goals
+                        and start a movement and find the will and power to sustain it.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--End of Card Display -->
+
+        <!-- MP Singh Card Display -->
+        <div
+            class="modal3 bio-card card-display-mpsingh hidden bg-black fixed bg-opacity-40 overflow-auto left-0 top-0 z-10 w-screen h-screen">
+            <div
+                class=" bg-grayprimary w-5/6 sm:w-4/6 md:w-3/6 xl:w-2/6 p-8 overflow-y-scroll h-5/6 fixed top-10 right-10">
+                <div class="close-icon">
+                    <img src="img/icons/cancel_cross.svg" alt="close button"
+                        class="h-8 w-8 cursor-pointer close_btn_mpsingh">
+                </div>
+                <div class="card bg-white w-80 xl:w-96 h-40 rounded-xl flex shadow-xl mt-3 xl:ml-0 ml-5">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/mpsingh.jpg" alt="MP Singh - Director of CACR" class="w-48 h-40">
+                    </div>
+                    <div class="card-txt flex flex-col pl-2 justify-center w-1/2">
+                        <p class="text-2xl uppercase font-bold  text-graysecondary-300 pb-1">MOHINDER PAL SINGH BACHHER
+                        </p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="text-graysecondary-200 uppercase ">DIRECTOR</p>
+                    </div>
+                </div>
+                <div class="card-info_txt w-80 xl:w-96 xl:pl-0 pl-5 h-auto pt-10">
+                    <p>
+                        Mohinder Pal Singh Bachher is a businessman trained in Marine equipment Sales & Support.
+                        His Marine business includes selling equipment and spares for ships, representing marine
+                        equipment manufactures from U.K, New Zealand, Germany, and India.
+                    </p>
+                    <p class="pt-5">
+                        He has also undertaken first-level training for Water Jets, Out Board Motors, and Stabilisers.
+                        He lives in Mumbai with his wife Jatinder Pal Kaur and two children Payal Arora and Harpreet
+                        Arora
+                        who are now married and settled in Delhi.
+                    </p>
+                    <p class="pt-5">
+                        Mr. M.P.SINGH has been the Past President of the Rotary Club of Bombay Bandra and is involved in
+                        many
+                        social activities looking after the underprivileged. He is associated with the Guru Harkishan
+                        School,
+                        Santa Cruz west as a Life Member, and the H West Ward federation. Being a very Social person he
+                        is also
+                        connected with many social and cultural organizations and is approachable for any call of duty.
+                        He advocates and endorses CACR activities and strongly believes in creating awareness in
+                        citizen's
+                        participation on Child Rights issues with a focus on ensuring free, quality & compulsory
+                        education for
+                        all children.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aswhin Kumar Shetty card  -->
+        <div
+            class="modal3 bio-card card-display-aswhin hidden bg-black fixed bg-opacity-40 overflow-auto left-0 top-0 z-10 w-screen h-screen">
+            <div
+                class=" bg-grayprimary w-5/6 sm:w-4/6 md:w-3/6 xl:w-2/6 p-8 overflow-y-scroll h-5/6 fixed top-10 right-10">
+                <div class="close-icon">
+                    <img src="img/icons/cancel_cross.svg" alt="close button"
+                        class="h-8 w-8 cursor-pointer close_btn_aswhin ">
+                </div>
+                <div class="card bg-white w-80  h-40 rounded-xl flex shadow-xl mt-3 xl:ml-0 ml-5">
+                    <div class="card-img w-48 h-40">
+                        <img src="./img/about/ashwin.jpg" alt="Indrani Malkani - Director of CACR" class="w-48 h-40 ">
+                    </div>
+                    <div class="card-txt flex flex-col pl-5 justify-center w-1/2">
+                        <p class="text-2xl uppercase font-bold  text-graysecondary-300 pb-1">ASWHIN KUMAR SHEETY </p>
+                        <!-- <p class="text-graysecondary-200 uppercase ">Nitin Wadhwani</p> -->
+                        <p class="text-graysecondary-200 uppercase ">Advisory</p>
+                    </div>
+                </div>
+                <div class="card-info_txt w-80 xl:w-96 xl:pl-0 pl-5 h-auto pt-10">
+
+
+                    <p>Assistant Trainer 2017 -18
+                        Presently member of Rotary Club of Bombay East
+                        Joined Rotary in 1997
+                        Elected President 2005- 2006
+                        Community Service and Fellowship were the flagship areas of this year
+                    </p>
+                    <p class="pt-5">
+                        Techno Legal Consultant on the Panel of all leading Banks and Financial Institutions
+                        as Real Estate Technical Evaluator and Appraiser.
+                        Graduated in Civil Engineering from the renowned VJTI in 1978 and after a span of
+                        three decades completed his Masters in Constitutional Law from Mumbai University.
+                    </p>
+                    <p class="pt-5">
+                        Spouse Mamatha is the Academic Co-ordinator of ISC section of Bombay Scottish
+                        School, Mahim, Mumbai.
+                        Daughters, Kaushalya and Janhvi are both in the Legal field. One working in Corporate
+                        Law and other in Media Laws.
+                        Son-in-law Sandeep, an IIM Alumnus is presently Facilities Director at Fortis
+                        Hospitals, Vasant Kunj, New Delhi.
+                    </p>
+                    <p class="pt-5">
+                        Passionate about Movies, cricket, community service and lives life as “AAM
+                        AADAMI”.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--End of Card Display -->
+    </main>
+
+    <footer class="bg-gradient-to-b from-darkbluesecondary to-darkblueprimary">
+        <div class="footer-container pt-8 md:pt-14 flex flex-col md:flex-row justify-around mx-auto xl:justify-around">
+            <!-- Company Container -->
+            <div class="footer-company hidden md:block md:w-1/4">
+                <div class="footer-title">
+                    <div class="footer-title_name">
+                        <span class="text-2xl p-3 text-yellowprimary">The Company</span>
+                        <!-- border-b-2 border-yellowprimary border-opacity-30 -->
+                    </div>
+                    <!-- Line -->
+                    <div class="footer-title_line h-0.5 w-44 bg-yellowprimary opacity-30 mt-4 ml-3"></div>
+                    <!-- End of Line-->
+                    <!-- Footer Logo -->
+                    <div class="footer-logo mt-8 ml-3 w-3/4 xl:w-full">
+                        <img src="./img/logos/footer-logo.png" alt="Footer Logo">
+                    </div> <!-- End of Footer Logo -->
+                    <!-- Footer Text -->
+                    <div class="footer-company_text pt-8">
+                        <p class="text-grayprimary ml-3 text-base xl:text-xl">
+                            CACR - Cititzens Action for Child Rights is a network of like minded citizens
+                            concerned about ensuring child rights with specific focus on ensuring good
+                            quality of education and health for all children.
+                            <br><br>
+                            We are a Section 25 company.
+                        </p>
+                    </div>
+                </div>
+            </div><!-- End of Company Container-->
+            <!-- Quick Links -->
+            <div class="footer-quicklinks w-1/4 pl-2 lg:pl-8 hidden md:block">
+                <div class="footer-title_name">
+                    <span class="text-2xl p-3 text-yellowprimary">Quick Links</span>
+                    <!-- border-b-2 border-yellowprimary border-opacity-30 -->
+                </div>
+                <!-- Line -->
+                <div class="footer-title_line h-0.5 w-44 bg-yellowprimary opacity-30 mt-4 ml-3"></div>
+                <!-- End of Line-->
+                <div class="footer-links mt-8">
+                    <ul class="">
+                        <li class="flex">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="index.html" class="footer-link">Home</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="about.html" class="footer-link">About Us</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="projects.html" class="footer-link">Our Projects</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="annual-reports.html" class="footer-link">Annual Project Reports</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="#" class="footer-link">Awards & Nominations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End of Quick Links-->
+            <div class="mobile-footer md:hidden">
+                <div class="flex flex-row justify-evenly">
+                    <a href="index.html" class="text-graysecondary-100 font-semibold text-lg">About Us</a>
+                    <a href="projects.html" class="text-graysecondary-100 font-semibold text-lg">Projects</a>
+                    <a href="news.html" class="text-graysecondary-100 font-semibold text-lg">News</a>
+                    <a href="contactus.html" class="text-graysecondary-100 font-semibold text-lg">Contact Us</a>
+                </div>
+            </div>
+            <!-- Contact Us -->
+            <div class="footer-contactus w-1/3 hidden md:block">
+                <div class="footer-title_name">
+                    <span class="text-2xl p-3 text-yellowprimary capitalize">Contact Us</span>
+                    <!-- border-b-2 border-yellowprimary border-opacity-30 -->
+                </div>
+                <!-- Line -->
+                <div class="footer-title_line h-0.5 w-44 bg-yellowprimary opacity-30 mt-4 ml-3"></div>
+                <!-- End of Line-->
+                <div class="address-info mt-8">
+                    <ul>
+                        <li class="flex self-center text-base xl:text-xl">
+                            <img src="./img/icons/gps.svg" alt="GPS" class="h-5 w-5 xl:h-6 xl:w-6 mt-2">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                1, Prabhav Society, 2nd Road, TPS III, Santacruz (E), 400055
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/gps.svg" alt="GPS" class="h-5 w-5 xl:h-6 xl:w-6 mt-4">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                103, 1st Floor, Nahar & Seth Industrial Estate, Chakala,
+                                Andheri (East), Mumbai 400099
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/clock.svg" alt="Time" class="h-5 w-5 xl:h-6 xl:w-6">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                Mon - Fri : 10.00 - 19.00
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/phone.svg" alt="Phone" class="h-5 w-5 xl:h-6 xl:w-6">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                +91-9987598509
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/link.svg" alt="Link" class="h-5 w-5 xl:h-6 xl:w-6">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                connect.cacr@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End of Contact Us-->
+        </div> <!-- End of footer container-->
+
+        <!-- Footer Rights Container -->
+        <div class="footer-rights flex justify-around pt-4 mt-6 md:mt-12 xl:mt-16 pb-4">
+            <div class="footer-rights_text w-full sm:w-3/4 pl-6 md:pl-10">
+                <span class="md:font-semibold text-grayprimary text-base md:text-xl ">CACR © 2021. ALL RIGHTS
+                    RESERVED.</span>
+            </div>
+            <div class="footer-rights_social w-1/4 sm:flex justify-evenly mr-6 hidden">
+                <div class="footer_facebook">
+                    <a href="https://www.facebook.com/NGOCACR/" target="_blank">
+                        <img src="./img/icons/facebook.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="footer_twitter">
+                    <a href="https://twitter.com/cacr6" target="_blank">
+                        <img src="./img/icons/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+                <div class="footer_linkedin">
+                    <a href="https://in.linkedin.com/company/citizens-association-for-child-rights" target="_blank">
+                        <img src="./img/icons/linkedin.svg" alt="Linkedin">
+                    </a>
+                </div>
+                <div class="footer_youtube">
+                    <a href="https://www.youtube.com/channel/UCid_6o8_t8Vx7oZUFGi5BnA" target="_blank">
+                        <img src="./img/icons/youtube.svg" alt="Youtube">
+                    </a>
+                </div>
+                <div class="footer_instagram">
+                    <a href="https://www.instagram.com/ngocacr/" target="_blank">
+                        <img src="./img/icons/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div> <!-- End of Footer Rights Container -->
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/about_script.js"></script>
+    <!-- PreLoader -->
+    <script>
+        let preloader = document.getElementById('loading');
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

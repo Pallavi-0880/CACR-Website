@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CACR - Citizens Association for Child Rights</title>
+    <link rel="stylesheet" href="./build/style.css">
+    <link rel="stylesheet" href="/public/build/practice.css">
+    <!--AOS Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+
+    <!-- Logo Slider -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./build/slider.css">
+
+</head>
+
+<body class="bg-gray-100 font-sans" onload="myFunction()">
+    <!--Preloader-->
+    <div class="loading" id="loading"></div>
+    <!-- Navigation Menu -->
+    <header>
+        <div class="mb-2">
+            <nav class="flex justify-between">
+                <!-- Logo -->
+                <div class="pl-4 sm:pl-10 pt-7 pb-5 pr-24 flex-shrink ">
+                    <h1>
+                        <a href="index.html">
+                            <img src="./img/nav_logo.png" alt="CACR Logo" class="h-12 sm:h-16 xl:h-20">
+                        </a>
+                    </h1>
+                </div>
+                <!-- Mobile Navigation Icon-->
+                <div class="px-4 cursor-pointer lg:hidden flex items-center" id="menu_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 md:h-12 md:w-12" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+
+                <!--Desktop Navigation -->
+                <div class="hidden lg:flex items-center flex-grow justify-between order-2 ">
+                    <ul class="font-title flex flex-grow justify-between lg:flex-row">
+
+                        <li class="nav-style">
+                            <a href="about.html" class="nav-style_hover">
+                                <span>About us</span>
+                            </a>
+                        </li>
+                        <li class="nav-style relative">
+                            <!-- <div class="cursor-pointer">
+                                <span class="nav-style_hover ">Programs</span>
+                                <div class="bg-white rounded-lg shadow-md absolute mt-3 w-40 h-32 flex flex-col justify-around self-center text-center">
+                                                    <a href="#" class=" px-2 py-2 hover:bg-pinkprimary hover:text-white ">Projects</a>
+                                                    <a href="#" class=" px-2 py-2 hover:bg-pinkprimary hover:text-white">Events</a>
+                                </div>
+                            </div> -->
+                            <div class="dropdown">
+                                <button class="nav-style nav-style_hover">Programs</button>
+                                <div
+                                    class="dropdown-content
+                                        ml-1 mb-0.5 bg-white bg-opacity-90 rounded-lg shadow-md pt-5 w-36 h-auto flex flex-col justify-evenly text-center gap-1">
+                                    <a href="projects.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Projects</a>
+                                    <a href="events.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Events</a>
+                                    <a href="news.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base rounded-b-lg">News</a>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="nav-style relative">
+                            <!-- <a href="#" class="nav-style_hover">
+                                <span>Resources</span>
+                            </a> -->
+                            <div class="dropdown">
+                                <button class="nav-style nav-style_hover">Resources</button>
+                                <div
+                                    class="dropdown-content
+                                        ml-1 mb-0.5 bg-white bg-opacity-90 rounded-lg shadow-md pt-5 w-48 h-auto flex flex-col justify-evenly text-center gap-1">
+                                    <a href="annual-reports.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Annual
+                                        Project Reports</a>
+                                    <a href="/public/newsletter.html" target="_blank"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Newsletter</a>
+                                    <a href="./documents/CACR_brochure.pdf" target="_blank"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">CACR
+                                        Brochure</a>
+                                    <a href="partnertestimonials.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base rounded-b-lg">Partner
+                                        Testimonials</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-style">
+                            <!-- <a href="#" class="nav-style_hover">
+                                <span>Contact us</span>
+                            </a> -->
+                            <div class="dropdown">
+                                <button class="nav-style nav-style_hover">Contact us</button>
+                                <div
+                                    class="dropdown-content
+                                        ml-1 mb-0.5 bg-white bg-opacity-90 rounded-lg shadow-md pt-5 w-48 h-auto flex flex-col justify-evenly text-center gap-1">
+                                    <a href="volunteer.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base">Volunteer
+                                        with us</a>
+                                    <a href="contactus.html"
+                                        class=" px-2 hover:bg-yellowprimary hover:text-white flex justify-center py-1 text-base rounded-b-lg mt-1">Connect
+                                        with us</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Donate Button -->
+                        <li>
+                            <div
+                                class="flex text-xl  xl:text-2xl uppercase font-semibold text-grayprimary flex-shrink justify-end">
+                                <a href="donate.html">
+                                    <span
+                                        class="p-12 bg-pinkprimary xl:p-14 hover:bg-red-500 hover:text-white">Donate</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Mobile Navigation -->
+            <div class="hidden" id="mob_nav">
+                <ul class="font-title flex flex-grow flex-col justify-center ">
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="about.html" class="">
+                            <span class="pl-2">About us</span>
+                        </a>
+                    </li>
+                    <li class="nav-style p-2 ">
+                        <div class="about_us flex ">
+                            <div class="hover:text-yellowprimary cursor-pointer" id="mob_prog">
+                                <span class="pl-2 pr-2">Programs</span>
+                            </div>
+                            <div class="cursor-pointer" id="mob_programs_btn">
+                                <img src="./img/icons/bottom_arrow.svg" alt="Bottom Arrow"
+                                    class="h-6 w-6 hover:bg-yellowprimary transition duration-300 ease-in">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start pl-12 pt-1 hidden" id="mob_programs_menu">
+                            <a href="projects.html" class=" p-2 text-lg font-medium hover:text-yellowprimary">Our
+                                Projects</a>
+                            <a href="events.html" class="p-2 text-lg font-medium hover:text-yellowprimary">Our
+                                Events</a>
+                            <a href="news.html" class="p-2 text-lg font-medium hover:text-yellowprimary">CACR in the
+                                News</a>
+                        </div>
+                    </li>
+                    <li class="nav-style p-2 ">
+                        <div class="about_us flex ">
+                            <div class="hover:text-yellowprimary cursor-pointer" id="mob_resource">
+                                <span class="pl-2 pr-2">Resources</span>
+                            </div>
+                            <div class="cursor-pointer" id="mob_resources_btn">
+                                <img src="./img/icons/bottom_arrow.svg" alt="Bottom Arrow"
+                                    class="h-6 w-6 hover:bg-yellowprimary transition duration-300 ease-in">
+                            </div>
+                        </div>
+                        <div class=" flex flex-col items-start pl-12 pt-1 hidden" id="mob_resources_menu">
+                            <a href="annual-reports.html"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">Annual Project Reports</a>
+                            <a href="./documents/Cacr_newsletter.pdf" target="_blank"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">Newsletter</a>
+                            <a href="./documents/CACR_brochure.pdf" target="_blank"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">CACR Brochure</a>
+                            <a href="partnertestimonials.html"
+                                class="p-2 text-lg font-medium hover:text-yellowprimary">Partner Testimonials</a>
+                        </div>
+                    </li>
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="contactus.html" class="">
+                            <span class="pl-2">Contact us</span>
+                        </a>
+                    </li>
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="volunteer.html" class="">
+                            <span class="pl-2">Volunteer</span>
+                        </a>
+                    </li>
+                    <li class="nav-style p-2 hover:bg-yellowprimary hover:text-white transition ease-in duration-150">
+                        <a href="donate.html" class=" ">
+                            <span class="pl-2">Donate</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-style p-2">
+                        <div class="flex justify-evenly">
+                            <a href="#" class="nav-style_hover">
+                                <span class="font-bold text-pinkprimary text-xl">Volunteer</span>
+                            </a>
+                            <a href="#" class="nav-style_hover">
+                                <span class="font-bold text-pinkprimary text-xl ml-10">Donate</span>
+                            </a>
+                        </div>
+                        -->
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Mobile Navigation -->
+        </div>
+    </header>
+
+    <!-- Main Body-->
+    <main>
+        <!-- Hero Page Section-->
+        <section class="hero-bg  bg-no-repeat bg-cover lg:h-screen -mt-0.5 pb-2 lg:pb-8
+                        lg:bg-cover h-auto" data-aos="fade-up">
+            <!-- H1 Message -->
+            <div class="flex flex-col self-center justify-center line text-center pt-32 pb-10 md:pt-64 md:pb-24">
+                <h1 class="text-xl sm:text-3xl xl:text-6xl font-bold text-white font-title animate-pulse 
+                            lg:text-5xl md:text-4xl">EMPOWER.EDUCATE.ENLIGHTEN</h1>
+            </div>
+
+
+            <div class="flex justify-around pb-3
+               lg:justify-between ">
+                <!-- Partner Logos -->
+                <div class="flex flex-row justify-between">
+                    <div class="pl-9 pr-5" data-aos="slide-left" data-aos-duration="1100" data-aos-mirror="false">
+                        <img src="./img/heroscreen/unicef_logo.png" alt="UNICEF Logo">
+                    </div>
+                    <div class="pr-5" data-aos="slide-left" data-aos-duration="1300" data-aos-mirror="false">
+                        <img src="./img/heroscreen/tiss_logo.png" alt="TISS Logo">
+                    </div>
+                    <div class="pr-5" data-aos="slide-left" data-aos-duration="1500" data-aos-mirror="false">
+                        <img src="./img/heroscreen/tata_logo.png" alt="Tata Trusts Logo">
+                    </div>
+                    <div class="pr-5" data-aos="slide-left" data-aos-duration="1700" data-aos-mirror="false">
+                        <img src="./img/heroscreen/vcan_logo.png" alt="VCAN Logo">
+                    </div>
+                </div>
+                <!-- Guidestar Icon -->
+                <div class="hidden lg:block pr-8 pt-4" data-aos="slide-left" data-aos-duration="2000"
+                    data-aos-mirror="false">
+                    <img src="./img/heroscreen/guidestar_logo.png" alt="Guidestar Logo">
+                </div>
+            </div>
+        </section> <!-- End of Hero Page Section-->
+
+        <!-- About Us Section -->
+        <section class="bg-white  pb-10" data-aos="fade-left" data-aos-duration="1500">
+            <div class="pt-10 lg:pt-20 flex flex-col xl:flex-row">
+                <!-- About us Container-->
+                <div class="about-us w-full xl:w-3/6 sm:pl-10   lg:pl-10 pl-2">
+                    <h3 class="about-us_h3 pl-3  md:pl-0 text-yellowprimary">About us</h3>
+                    <!-- <h1 class="about-us_h1 pl-3  md:pl-0">What we are doing</h1> -->
+                    <p class="about-us_p pl-3 md:pl-0">
+                        We are a non-profit organization registered in 2013
+                        under Section 8 of Companies Act, 2013.
+                    </p>
+                    <p class="about-us_p pl-3 md:pl-0">
+                        Our primary focus is on Social Behavioral Change Communication Programs on Hand Washing With
+                        Soap,
+                        Personal Hygiene Management, Menstrual Hygiene Management, and Nutrition in government schools.
+                    </p>
+                    <div class="read-more_btn
+                                text-base py-4 w-3/4 mx-auto sm:mx-0 ">
+                        <a href="about.html" class="read-more_btn_hover">Read More</a>
+                    </div>
+                </div> <!-- End of About us Container -->
+                <!-- Cards -->
+                <div class="sm:w-full mt-8 lg:mt-0 lg:pt-12 xl:w-3/6 flex sm:flex-row xl:flex-wrap sm:pl-8 xl:pl-14 xl:p-0
+                            sm:p-6 flex-col gap-2 lg:gap-3 mx-auto">
+                    <!-- Donation Card -->
+                    <div class="about-us_card xl:mr-8 sm:mr-2 px-16 sm:px-0">
+                        <div class="icon block mx-auto w-max pt-10 pb-4 
+                        ">
+                            <a href="" class="cursor-pointer">
+                                <img src="./img/icons/heart_icon.png" alt="Rupee">
+                            </a>
+                        </div>
+                        <div class="text mx-auto w-max">
+                            <a href="donate.html" class="card_link">
+                                Give Donation <br>
+                                <span class="text-base text-center text-yellowprimary">(80 G Certificate)</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Volunteer  Card -->
+                    <div class="about-us_card mr-2">
+                        <div class="icon block mx-auto w-max pt-10 pb-4">
+                            <a href="" class="">
+                                <img src="./img/icons/volunteer.svg" alt="Volunteer">
+                            </a>
+                        </div>
+                        <div class="text mx-auto w-max">
+                            <a href="volunteer.html" class="card_link">
+                                Be a volunteer
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Event  Card -->
+                    <div class="about-us_card xl:mr-8 xl:mt-8  mr-2">
+                        <div class="icon block mx-auto w-max pt-10 pb-4">
+                            <a href="" class="">
+                                <img src="./img/icons/event.svg" alt="Event">
+                            </a>
+                        </div>
+                        <div class="text mx-auto w-max">
+                            <a href="events.html" class="card_link">
+                                Our Events
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project  Card -->
+                    <div class="about-us_card xl:mt-8">
+                        <div class="icon block mx-auto w-max pt-10 pb-4">
+                            <a href="" class="">
+                                <img src="./img/icons/calendar.svg" alt="Project">
+                            </a>
+                        </div>
+                        <div class="text mx-auto w-max">
+                            <a href="projects.html" class="card_link">
+                                Our Projects
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- End of Cards-->
+            </div>
+        </section> <!-- End of About Us Section-->
+
+        <!-- Our Impact Section -->
+        <section class="bg-yellowprimary pt-10 pb-12 lg:pb-32" data-aos="fade-right" data-aos-duration="1500">
+            <div class="title-container">
+                <h2 class="impact_h2">Our Impact</h2>
+                <!-- <h3 class="impact_h3">Upto 2020</h3> -->
+            </div>
+            <!--Container-->
+            <div
+                class="container bg-grayprimary w-11/12 xl:w-5/6 h-max mx-auto mt-12 lg:mt-16 rounded-3xl flex md:flex-row pb-8 flex-wrap md:flex-nowrap">
+                <!-- Cards -->
+                <div class="w-1/2 md:w-1/5 pt-8 ">
+                    <img src="./img/icons/handwash2.png" alt="Handwash" class="m-auto">
+                    <h3 class="impact_title">62,318</h3>
+                    <p class="impact_p">
+                        Personal Hygiene Programs
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-1/5 pt-8 ">
+                    <img src="./img/icons/girl1.png" alt="Menstrual Hygiene" class="m-auto">
+                    <h3 class="impact_title">38,225</h3>
+                    <p class="impact_p">
+                        Menstrual Hygiene Programs
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-1/5 pt-8 ">
+                    <img src="./img/icons/flushthevirus.png" alt="Flush the Virus" class="m-auto">
+                    <h3 class="impact_title">8,00,000+</h3>
+                    <p class="impact_p">
+                        Flush the Virus Program
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-1/5 pt-8 ">
+                    <img src="./img/icons/megaphone.png" alt="Awarness Campaign" class="m-auto">
+                    <h3 class="impact_title">4,93,110</h3>
+                    <p class="impact_p">
+                        Awareness Campaigns
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-1/5 pt-8 ">
+                    <img src="./img/icons/vaccine.png" alt="Vaccination Campaign" class="m-auto">
+                    <h3 class="impact_title">52,589</h3>
+                    <p class="impact_p">
+                        Vaccination Campaigns
+                    </p>
+                </div> <!--End of Cards-->
+            </div>
+        </section><!-- End of Our Impact Section-->
+
+        <!-- Our Projects Section -->
+        <section class="bg-white" data-aos="fade-down" data-aos-duration="1500">
+            <!-- Header Container -->
+            <div class="title-container">
+                <h2 class="project_h2">Projects</h2>
+                <!-- <h3 class="project_h3">Our Recent Projects</h3> -->
+            </div> <!-- End of Header Container -->
+
+            <!-- Project Card Container -->
+
+            <div class="slider-container">
+                <div class="slider mt-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="card bg-white shadow-md shadow-black-700/50 transition-transform transform duration-300 hover:scale-90">
+                        <img src="/public/img/projects/bts_proj_small.jpg" alt="Card 1">
+                        <h1 class="font-semibold">'Back to Home - Back to School'
+                            - Flood Response in Raigad and Ratnagiri</h1>
+                        <!-- <h3>Supported by: UNICEF</h3> -->
+                        <p class=" font-medium text-justify">CACR with UNICEF support undertook a campaign to aid rehabilitation for close 12300 of
+                            the worst affected families.</p>
+                        <br />
+                        <a href="project-bts.html"> <button
+                                class="btn  card-btn my-10 block text-center  text-xl capitalize p-4 bg-blueprimary
+                            text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-90">Read More <span
+                                    class="ml-4">→</span>
+                            </button>
+                        </a>
+
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card transition-transform transform duration-300 hover:scale-90">
+                        <img src="./img/projects/2_proj_small.jpg" alt="Computer literacy Program">
+                        <h1>Covid-19 Response</h1>
+                        <p class=" font-medium text-justify"> 2020 was the most challenging year for everyone due to the virus and the lockdowns.
+                            However, we were busier than ever in providing much-needed relief to those affected by
+                            the lockdown.</p>
+                        <br />
+                        <a href="project-bts.html"> <button
+                            class="btn  card-btn my-10 block text-center  text-xl capitalize p-4 bg-blueprimary
+                        text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-90">Read More <span
+                                class="ml-4">→</span>
+                        </button>
+                    </a>                    </div>
+                    <!-- Card 3 -->
+                    <div class="card transition-transform transform duration-300 hover:scale-90">
+                        <img src="./img/projects/3_proj_small.jpg" alt="Card 3">
+                        <h1>Ground Activation for
+                            Vaccination & CAB Awarness </h1>
+                        <p class=" font-medium text-justify"> Our only weapon to fight COVID19 is immunization, and therefore we have been
+                            continuously carrying out ground activation for
+                            vaccination registration, vaccine hesitancy, COVID-19 Appropriate behavior.</p>
+
+                        <a href="project-bts.html"> <button
+                                class="btn  card-btn my-10 block text-center  text-xl capitalize p-4 bg-blueprimary
+                            text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-90">Read More
+                                <span class="ml-4">→</span>
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card transition-transform transform duration-300 hover:scale-90">
+                        <img src="./img/projects/1_proj_small.jpg" alt="Wash Program">
+                        <h1>WASH in Schools</h1>
+                        <p class="  font-medium  text-justify"> Inducing a behavioural shift towards better hygiene practices,
+                            so that children are healthier and perform better in school.</p>
+                        <br />
+                        <br />
+                        <br/>
+                        <a href="project-bts.html"> <button
+                                class="btn  card-btn my-10 block text-center  text-xl capitalize p-4 bg-blueprimary
+                        text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-90">Read More <span
+                                    class="ml-4">→</span>
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Additional Cards -->
+                    <div class="card transition-transform transform duration-300 hover:scale-90">
+                        <img src="./img/projects/adolescent anemia/Peer To Peer Learning (1).jpg" alt="Card 5">
+                        <h1>Adolescent Anemia implemented in
+                            BMC
+                            schools in Mumbai</h1>
+                        <p class=" font-medium text-justify">According to the National Family Health Survey (NHFS-5) 2019-2021, 54.7% adolescent
+                            girls in
+                            Maharashtra are anemic. CACR in collaboration with UNICEF Maharashtra, Brihanmumbai
+                            Municipal Corporation (BMC).</p>
+                        <a href="../public/project-adolescent-anemia.html"> <button class="btn">Read More</button> </a>
+                    </div>
+
+                </div>
+                <div class="view-more mt-6 flex  justify-end mr-10 pb-8">
+                    <a href="/public/projects.html"
+                        class="justify-end text-right transition transform duration-500 ease-in-out hover:translate-y-2 hover:scale-950">
+                        <span class="view-more_btn ">View More &rarr;</span>
+                    </a>
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- <div class="flex flex-wrap justify-center ml-3 gap-4 lg:ml-0 lg:justify-around pt-10 lg:flex-nowrap">
+               
+                <div class="card w-72 lg:w-72 xl:w-1/4 h-auto bg-blue-50  shadow-lg rounded-lg transition transform hover:shadow-2xl hover:-translate-y-2">
+                    <img src="./img/projects/bts_proj_small.jpg" alt="Back to Home - Back to School" class="card-img block w-full h-52 rounded-t-lg object-cover mb-5">
+                    <div class="card_content">
+                        <div class="card-title text-2xl capitalize pl-5 font-semibold"> 'Back to Home - Back to School' - Flood Response in Raigad and Ratnagiri</div>
+                        <div class="card-text p-5">
+                            <h3 class="text-xl font-medium py-2">Supported by: UNICEF</h3>
+                            <p class="text-lg font-medium text-justify">
+                                CACR with UNICEF support undertook a campaign to aid rehabilitation for close 12300 of the worst affected families.
+                            </p>
+                            <button class="card-btn my-10 block text-center w-full text-xl capitalize p-4 bg-blueprimary
+                            text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-110">
+                               <a href="project-bts.html">Read More <span class="ml-4">&rarr;</span>
+                               </a>
+                            </button>
+                            
+                        </div>
+                    </div> -->
+            <!-- </div>  -->
+
+            <!-- Project 2-->
+            <!-- <div class="card w-72 lg:w-72 xl:w-1/4 h-auto bg-blue-50 shadow-lg rounded-lg transition transform hover:shadow-2xl hover:-translate-y-2">
+                    <img src="./img/projects/2_proj_small.jpg" alt="Covid-19 Response" class="card-img block w-full h-52 rounded-t-lg object-cover mb-5">
+                    <div class="card_content">
+                        <div class="card-title text-2xl capitalize pl-5 font-semibold"> Covid-19 Response</div>
+                        <div class="card-text p-5">
+                            <p class="text-lg font-medium text-justify">
+                                2020 was the most challenging year for everyone due to the virus and the lockdowns.
+                                However, we were busier than ever in providing much-needed relief to those affected by the lockdown. 
+                            </p>
+                            <button class="card-btn my-10 block text-center w-full text-xl capitalize p-4 bg-blueprimary
+                            text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-110">
+                            <a href="project-covidresponse.html">Read More <span class="ml-4">&rarr;</span>
+                            </a>
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>  -->
+
+            <!-- Project 3-->
+            <!-- <div class="card w-72 lg:w-72 xl:w-1/4 h-auto bg-blue-50 shadow-lg rounded-lg transition transform hover:shadow-2xl hover:-translate-y-2">
+                    <img src="./img/projects/3_proj_small.jpg" alt="" class="card-img block w-full h-52 rounded-t-lg object-cover mb-5">
+                    <div class="card_content">
+                        <div class="card-title text-2xl capitalize pl-5 font-semibold"> Ground Activation for Vaccination & CAB Awarness</div>
+                        <div class="card-text p-5">
+                            <p class="text-lg font-medium text-justify">
+                                 Our only weapon to fight COVID19 is immunization, and therefore we have been continuously carrying out ground activation for 
+                                vaccination registration, vaccine hesitancy, COVID-19 Appropriate behavior.
+                            </p>
+                            <button class="card-btn my-10 block text-center w-full text-xl capitalize p-4 bg-blueprimary
+                            text-grayprimary transition transform duration-500 ease-linear  hover:-translate-y-1 hover:scale-110">
+                            <a href="project-vaccinationdrive.html">Read More <span class="ml-4">&rarr;</span>
+                            </a>
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>  -->
+
+
+            <!-- </div> -->
+
+            <!-- View More Button -->
+
+        </section><!--End of Our Projects Section-->
+
+        <!-- Get Involved Section -->
+        <section class="get-involved bg-yellowprimary h-auto" data-aos="fade-up" data-aos-duration="1500">
+            <div class="get-involved_title mb-10 md:mb-14">
+                <h2 class="get-involved_h2 pb-4">
+                    <span class="text-darkblueprimary opacity-75">Get Involved</span> Today!
+                </h2>
+                <p class="text-base text-center capitalize font-medium">*Your information is safe with us!</p>
+            </div>
+            <div class="get-involved_form w-4/5 mx-auto">
+                <form action="" method="post" class="">
+                    <div
+                        class="form_inputs flex flex-col items-center md:flex-row md:justify-evenly gap-3 md:gap-2 lg:gap-0">
+                        <div class="form_first-name">
+                            <input type="text" name="firstname" id="firstname" placeholder="First Name..." required
+                                class="form_style">
+                        </div>
+                        <div class="form_last-name">
+                            <input type="text" name="lastname" id="lastname" placeholder="Last Name..." required
+                                class="form_style">
+                        </div>
+                        <div class="form_email">
+                            <input type="email" name="email" id="email" placeholder="Email..." required
+                                class="form_style">
+                        </div>
+                    </div>
+                    <div class="form_button mt-10 md:mt-14 flex justify-center pb-14 
+                    transition transform  duration-300 hover:scale-105 hover:translate-y-2">
+                        <input type="submit" value="Apply" class="form_btn">
+                    </div>
+
+                </form>
+            </div>
+        </section><!-- End of Get Involved Section -->
+
+        <!-- Our Partners Section -->
+        <section class="our-partners bg-white max-h-full pb-16 md:pb-24" data-aos="fade-down" data-aos-duration="1500">
+            <!-- Header Container -->
+            <div class="title-container">
+                <h2 class="uppercase text-3xl lg:text-5xl font-bold text-center pt-12">Our Partners</h2>
+            </div> <!-- End of Header Container -->
+            <!-- Logos Container -->
+            <!-- <div class="our-partners_logos my-24 flex justify-center">
+                < <img src="./img/logos/partner_logos.png" alt="Logos"> 
+            </div> -->
+            <div class="our-patners_logos my-24">
+
+                <section class="customer-logos slider">
+                    <!-- <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div> -->
+                    <div class="slide"><img src="./img/partner_slider/unicef.png" alt="UNICEF"></div>
+                    <div class="slide"><img src="./img/partner_slider/Mahapeconet.png" alt="Maharastra Peconet"></div>
+                    <div class="slide"><img src="./img/partner_slider/henkelad.png" alt="Henkel"></div>
+                    <div class="slide"><img src="./img/partner_slider/vcan.png" alt="VCAN"></div>
+                    <div class="slide"><img src="./img/partner_slider/idobro.png" alt="Idobro"></div>
+                    <div class="slide"><img src="./img/partner_slider/rise.png" alt="Rise"></div>
+                    <div class="slide"><img src="./img/partner_slider/mahauwes.png" alt="Maha UWES"></div>
+                    <div class="slide"><img src="./img/partner_slider/unitedwaymumbai.png" alt="United Way Mumbai">
+                    </div>
+                    <div class="slide"><img src="./img/partner_slider/ongc.png" alt="ONGC"></div>
+                    <div class="slide"><img src="./img/partner_slider/viacom18.png" alt="VIACOM 18"></div>
+                    <div class="slide"><img src="./img/partner_slider/bpcl.png" alt="BCPL"></div>
+                    <div class="slide"><img src="./img/partner_slider/habitat.png" alt="Habitat for Humanity"></div>
+                    <div class="slide"><img src="./img/partner_slider/techmahindra.png" alt="Tech Mahindra Foundation">
+                    </div>
+                    <div class="slide"><img src="./img/partner_slider/nesswadiafoundation.png"
+                            alt="Ness Wadia Foundation"></div>
+                    <div class="slide"><img src="./img/partner_slider/world.png" alt="World Vision Indias"></div>
+                    <div class="slide"><img src="./img/partner_slider/Kshamta.png" alt="Kshamata"></div>
+                    <div class="slide"><img src="./img/partner_slider/casa.png" alt="CASA"></div>
+                    <div class="slide"><img src="./img/partner_slider/seedslogo.png" alt="SEEDS"></div>
+                </section>
+            </div>
+
+
+            <!-- Social Media -->
+            <!-- <div class="our-partners_social-media h-auto">
+                <div class="social-media_title">
+                    <h3 class="text-center uppercase text-2xl lg:text-3xl font-semibold">FOLLOW US IN SOCIAL NETWORKS</h3>
+                </div>
+                <div class="social-media_box flex flex-col items-center md:flex-row md:justify-evenly pt-12 md:pt-16">
+                    <div class="social-media_facebook pb-12 md:pb-0">
+                        <a href="https://www.facebook.com/NGOCACR/" target="_blank" class="social-link_style facebook-style text-center inline-block w-64 md:w-60">
+                            Facebook
+                        </a>
+                    </div>
+                    <div class="social-media_twitter pb-12 md:pb-0">
+                        <a href="https://twitter.com/cacr6" target="_blank" class="social-link_style twitter-style text-center inline-block w-64 md:w-60"">
+                            Twitter
+                        </a>
+                    </div>
+                    <div class="social-media_youtube  md:pb-0">
+                        <a href="https://www.youtube.com/channel/UCid_6o8_t8Vx7oZUFGi5BnA" target="_blank" class="social-link_style youtube-style text-center inline-block w-64 md:w-60"">
+                            Youtube
+                        </a>
+                    </div>
+                </div>
+            </div>End of Social Media -->
+        </section><!-- End of Our Partners Section -->
+    </main>
+
+    <footer class="bg-gradient-to-b from-darkbluesecondary to-darkblueprimary">
+        <div class="footer-container pt-8 md:pt-14 flex flex-col md:flex-row justify-around mx-auto xl:justify-around">
+            <!-- Company Container -->
+            <div class="footer-company hidden md:block md:w-1/4">
+                <div class="footer-title">
+                    <div class="footer-title_name">
+                        <span class="text-2xl p-3 text-yellowprimary">The Company</span>
+                        <!-- border-b-2 border-yellowprimary border-opacity-30 -->
+                    </div>
+                    <!-- Line -->
+                    <div class="footer-title_line h-0.5 w-44 bg-yellowprimary opacity-30 mt-4 ml-3"></div>
+                    <!-- End of Line-->
+                    <!-- Footer Logo -->
+                    <div class="footer-logo mt-8 ml-3 w-3/4 xl:w-full">
+                        <img src="./img/logos/footer-logo.png" alt="Footer Logo">
+                    </div> <!-- End of Footer Logo -->
+                    <!-- Footer Text -->
+                    <div class="footer-company_text pt-8">
+                        <p class="text-grayprimary ml-3 text-base xl:text-xl">
+                            Citizens Association for Child Rights (CACR) is a non-profit organization.
+                            We work in Behavioral Change Communication Programs in Municipal schools of Mumbai.
+                            <br><br>
+                            We are a Section 25 company.
+                        </p>
+                    </div>
+                </div>
+            </div><!-- End of Company Container-->
+            <!-- Quick Links -->
+            <div class="footer-quicklinks w-1/4 pl-2 lg:pl-8 hidden md:block">
+                <div class="footer-title_name">
+                    <span class="text-2xl p-3 text-yellowprimary">Quick Links</span>
+                    <!-- border-b-2 border-yellowprimary border-opacity-30 -->
+                </div>
+                <!-- Line -->
+                <div class="footer-title_line h-0.5 w-44 bg-yellowprimary opacity-30 mt-4 ml-3"></div>
+                <!-- End of Line-->
+                <div class="footer-links mt-8">
+                    <ul class="">
+                        <li class="flex">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="index.html" class="footer-link">Home</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="about.html" class="footer-link">About Us</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="projects.html" class="footer-link">Our Projects</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="annual-reports.html" class="footer-link">Annual Project Reports</a>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/right_arrow.png" alt="Right Arrow" class="w-6 h-6">
+                            <a href="#" class="footer-link">Awards & Nominations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End of Quick Links-->
+            <div class="mobile-footer md:hidden">
+                <div class="flex flex-row justify-evenly">
+                    <a href="about.html" class="text-graysecondary-100 font-semibold text-lg">About Us</a>
+                    <a href="projects.html" class="text-graysecondary-100 font-semibold text-lg">Projects</a>
+                    <a href="news.html" class="text-graysecondary-100 font-semibold text-lg">News</a>
+                    <a href="contactus.html" class="text-graysecondary-100 font-semibold text-lg">Contact Us</a>
+                </div>
+            </div>
+            <!-- Contact Us -->
+            <div class="footer-contactus w-1/3 hidden md:block">
+                <div class="footer-title_name">
+                    <span class="text-2xl p-3 text-yellowprimary capitalize">Contact Us</span>
+                    <!-- border-b-2 border-yellowprimary border-opacity-30 -->
+                </div>
+                <!-- Line -->
+                <div class="footer-title_line h-0.5 w-44 bg-yellowprimary opacity-30 mt-4 ml-3"></div>
+                <!-- End of Line-->
+                <div class="address-info mt-8">
+                    <ul>
+                        <li class="flex self-center text-base xl:text-xl">
+                            <img src="./img/icons/gps.svg" alt="GPS" class="h-5 w-5 xl:h-6 xl:w-6 mt-2">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                1, Prabhav Society, 2nd Road, TPS III, Santacruz (E), 400055
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/gps.svg" alt="GPS" class="h-5 w-5 xl:h-6 xl:w-6 mt-4">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                103, 1st Floor, Nahar & Seth Industrial Estate, Chakala,
+                                Andheri (East), Mumbai 400099
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/clock.svg" alt="Time" class="h-5 w-5 xl:h-6 xl:w-6">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                Mon - Fri : 10.00 - 19.00
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/phone.svg" alt="Phone" class="h-5 w-5 xl:h-6 xl:w-6">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                +91-9987598509
+                            </p>
+                        </li>
+                        <li class="flex mt-5">
+                            <img src="./img/icons/link.svg" alt="Link" class="h-5 w-5 xl:h-6 xl:w-6">
+                            <p class="text-grayprimary pl-5 text-base xl:text-xl">
+                                connect.cacr@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End of Contact Us-->
+        </div> <!-- End of footer container-->
+
+        <!-- Footer Rights Container -->
+        <div class="footer-rights flex justify-around pt-4 mt-6 md:mt-12 xl:mt-16 pb-4">
+            <div class="footer-rights_text w-full sm:w-3/4 pl-6 md:pl-10">
+                <span class="md:font-semibold text-grayprimary text-base md:text-xl ">CACR © 2021. ALL RIGHTS
+                    RESERVED.</span>
+            </div>
+            <div class="footer-rights_social w-1/4 sm:flex justify-evenly mr-6 hidden">
+                <div class="footer_facebook">
+                    <a href="https://www.facebook.com/NGOCACR/" target="_blank">
+                        <img src="./img/icons/facebook.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="footer_twitter">
+                    <a href="https://twitter.com/cacr6" target="_blank">
+                        <img src="./img/icons/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+                <div class="footer_linkedin">
+                    <a href="https://in.linkedin.com/company/citizens-association-for-child-rights" target="_blank">
+                        <img src="./img/icons/linkedin.svg" alt="Linkedin">
+                    </a>
+                </div>
+                <div class="footer_youtube">
+                    <a href="https://www.youtube.com/channel/UCid_6o8_t8Vx7oZUFGi5BnA" target="_blank">
+                        <img src="./img/icons/youtube.svg" alt="Youtube">
+                    </a>
+                </div>
+                <div class="footer_instagram">
+                    <a href="https://www.instagram.com/ngocacr/" target="_blank">
+                        <img src="./img/icons/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div> <!-- End of Footer Rights Container -->
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <!-- Logo Slider -->
+    <script>
+        $(document).ready(function () {
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+    </script>
+    <!-- PreLoader -->
+    <script>
+        let preloader = document.getElementById('loading');
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+    </script>
+    <!--AOS Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>
